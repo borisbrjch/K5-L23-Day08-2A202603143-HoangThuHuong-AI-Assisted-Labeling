@@ -6,7 +6,7 @@
 - Tài khoản GitHub: https://github.com/borisbrjch
 - Repo bài nộp (URL): https://github.com/borisbrjch/K5-L23-Day08-2A202603143-HoangThuHuong-AI-Assisted-Labeling
 - Commit chốt bài (hash): <<>>
-- Máy: <<hệ điều hành, GPU (CUDA / MPS / không có)>>
+- Máy: Apple M1 8GB
 - CVAT (Docker): <<2.74.1>>
 
 ## Kết quả tóm tắt (điền cuối bài; số lấy từ `submission/qc/*`, kèm mẫu số)
