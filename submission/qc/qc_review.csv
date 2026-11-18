@@ -1,0 +1,8 @@
+image,object_id,error_type,reviewer,note
+img_003.jpg,87,sai_vi_tri_kich_thuoc,Claude,"box person chỉ ôm nửa thân (từ nón đến eo), không ôm chân → box phải ôm toàn người nhìn thấy"
+img_003.jpg, 11, ignore_region_sai, 143, vẫn có thể tách và gắn nhãn person
+img_006.jpg,,khong,143,đã gắn đủ nhãn
+img_010.jpg,,khong,Claude AI,các box three_wheeler và person đều chính xác (ảnh đã sửa kỹ trong review)
+img_014.jpg,154,sai_vi_tri_kich_thuoc,Claude AI,"box person ôm cả gánh hàng (baskets treo trên vai) → box phải chỉ ôm người (từ đầu đến chân), hàng vác tay không thuộc box"
+img_017.jpg,166,box_chua_khit,143,box person cho người áo xanh chưa chạm đúng viền object.
+img_033.jpg,,khong,Claude AI,các box car/motorbike/person đều chính xác
