@@ -1,5 +1,29 @@
 step,images,minutes,note
-1, img_001, 04:38, none
-1, img_012, 02:32, none
-1, img_020, 02:11, none
-1, img_036, 04:00, none
+gold_manual, img_001, 04:38, none
+gold_manual, img_012, 02:32, none
+gold_manual, img_020, 02:11, none
+gold_manual, img_036, 04:00, none
+batch_review, img_003, 05:40, mất khoảng 1p để làm quen workflow. Pre-label vẫn còn mắc những lỗi phổ biến nhưng giảm được một số thao tác gắn nhãn cũng như giúp consistency trong việc không bỏ sót vật thể cần label
+batch_review, img_004, 01:11, pre-label hoạt động tốt ở ảnh này. Chủ yếu qc lần cuối gắn thêm box và chỉnh box ôm object.
+batch_review, img_005, 08:22, ảnh khó nhiều vật thể chồng lấn / truncated tuy nhiên pre-label khá chính xác -> giảm mệt mỏi và sai sót khi gắn nhãn
+batch_review, img_006, 04:54, none
+batch_review, img_008, 02:12, model hoạt động tốt ở những vùng < 20px nhưng theo guideline -> gán ignore-region. Hoạt động chưa tốt lắm với class three-wheeler ví dụ: sai vị trí box / thừa box (phỏng đoán: do mỗi xe chở một mặt hàng khác nhau -> không đồng nhất hình dạng)
+batch_review, img_009, 01:46, nhận diện class three-wheeler sai / nhầm với vật thể như mái che sạp bán hàng / xe máy chở hàng cồng kềnh có chân chống lớn kèm baga chở hàng. Nhận diện sót vật thể đuôi xe máy / gắn nhầm nhãn người cho cái nón.
+batch_review, img_010, 03:05, nhận diện sai đuôi xe xích lô = xe đạp / bbox cho three-wheel bị tách đôi (phỏng đoán: do dữ liệu training chưa có guildeline rõ ràng cho class này). Mở một can_review object nơi vật thể person bị che khuất chỉ nhìn thấy một cánh tay nhưng bbox area > 20px
+batch_review, img_013, 02:10, class three-wheels hoạt đông chưa tốt / gắn cho xe tuktuk bị tách box / gắn nhầm vào object khác
+batch_review, img_014, 03:40, model đang nhận diện gánh hàng rong = three-wheeler nhưng trong guideline không bao gồm vật thể này trong class -> xoá nhãn
+batch_review, img_017, 01:24, none
+batch_review, img_018, 06:40, none
+batch_review, img_021, 02:41, none
+batch_review, img_022, 02:23, none
+batch_review, img_023, 01:28, none
+batch_review, img_024, 10:03, none
+batch_review, img_025, 02:35, none
+batch_review, img_026, 03:35, none
+batch_review, img_027, 02:09, none
+batch_review, img_028, 04:29, none
+batch_review, img_029, 04:38, none
+batch_review, img_031, 00:25, none
+batch_review, img_033, 02:14, none
+batch_review, img_034, 01:48, none
+batch_review, img_035, 03:17, none
