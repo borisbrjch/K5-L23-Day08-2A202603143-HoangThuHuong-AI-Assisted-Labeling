@@ -60,10 +60,12 @@
 
 | Ảnh | SAM (phiên bản) | Số click | Mask gồm người lái / hàng hoá? | Lỗi quan sát | File trong `masks/` |
 |---|---|---|---|---|---|
-| <<img_0xx>> | <<>> | <<>> | <<>> | <<>> | <<>> |
+| img_013 | SAM 2.1-b | 6 (4 pos + 2 neg) | **Không** — mask chỉ bao thân xe tuk-tuk và mái che, loại người lái ra ngoài nhờ 2 click negative | Mask sát biên khung xe, đúng theo guideline 4.2 (polygon bám đường biên phần nhìn thấy). Không có lỗ thủng đáng kể. | `tuktuk_img013.jpg` |
+| img_009 | SAM 2.1-b | 8 (3 pos + 5 neg) | **Không** — mask chỉ bao thân xe máy và bánh xe, loại hàng rau (túi xanh lá) và người lái ra ngoài nhờ 5 click negative | Mask đúng biên xe theo guideline 4.2. Hàng hoá nhô ra > 20% chiều dài xe → không gồm trong mask (đúng v1.1 CAL-02). | `xemay_img009.jpg` |
+| img_010 | SAM 2.1-b | 6 (3 pos + 3 neg) | **Không** — mask chỉ bao khung xích lô và mái che, loại người lái ra ngoài nhờ 3 click negative | Mask bám sát biên khung xe và mái gắn liền. Lỗ thủng giữa khung xích lô (< 5% diện tích) không vẽ, đúng guideline 4.2. | `xichlo_img010.jpg` |
 
-- Đối chiếu guideline mục 4.2: quy tắc nào giúp, quy tắc nào thiếu? <<>>
-- *(Tuỳ chọn)* Interactor SAM trong CVAT: làm được / không (lỗi gì, đã thử gì); khác gì offline: <<>>
+- **Đối chiếu guideline mục 4.2:** (1) Quy tắc **"polygon bám đường biên phần nhìn thấy"** giúp đặt click positive chính xác vào giữa vật, và negative vào vùng không thuộc vật (người lái, hàng hoá). (2) Quy tắc **"lỗ thủng < 5% không vẽ"** giúp quyết định không cần negative click cho khoảng trống nhỏ giữa khung xích lô. (3) Guideline **thiếu hướng dẫn số click tối thiểu** và **chiến lược đặt negative click** khi vật và người/hàng chồng lên nhau — với img_009, cần 5 negative click thử dần mới tách sạch hàng rau ra khỏi mask.
+- *(Tuỳ chọn)* Interactor SAM trong CVAT: **chưa thử** (part 5 chỉ yêu cầu 3 vật offline).
 
 ## 6. Calibration (Part 6)
 
@@ -87,7 +89,7 @@
 
 ## 8. Ghi chú cá nhân
 
-- **Dùng AI để làm bài** (công cụ nào, việc gì, kiểm tra thế nào; "không dùng" nếu không): gpt (xác định, phân rã và phản biện vấn đề), claude (viết script, copy nội dung báo cáo chính xác từ exported file và tôi tự kiểm tra lại)
+- **Dùng AI để làm bài** (công cụ nào, việc gì, kiểm tra thế nào; "không dùng" nếu không): gpt (xác định, phân rã và phản biện vấn đề), claude (viết script, copy nội dung báo cáo chính xác từ exported file và tôi tự kiểm tra lại). AI hỗ trợ viết script, điền báo cáo, tôi là người kiểm tra, lên kế hoạch thực thi.
 - Gold có bị nhiễm không (bạn có nhìn pre-label hay hỏi AI trước khi gán xong)? không 
 - Máy / GPU / CVAT dùng; vướng mắc cài đặt: không
 - Dùng cache `data/cache/` thay vì tự chạy? không
